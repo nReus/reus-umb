@@ -1,13 +1,13 @@
----
-version: '3.3'
+version: "3.3"
+
 services:
   app_proxy:
     environment:
       APP_HOST: komga
       APP_PORT: 42069
-  komga:
+      
+  web:
     image: gotson/komga:latest
-    container_name: komga
     volumes:
       - type: bind
         source: ${APP_DATA_DIR}:/config
@@ -19,7 +19,5 @@ services:
         source: ${APP_DATA_DIR}:timezone #alternatively you can use a TZ environment variable, like TZ=Europe/London
         target: /etc/timezone
         read_only: true
-    ports:
-      - 42069:25600
     user: "1000:1000"
     restart: unless-stopped
