@@ -7,16 +7,12 @@ services:
       APP_PORT: 42069
       
   webserver:
-    image: gotson/komga
+    image: gotson/komga:latest
     ports:
       - "42069:25600"
     volumes:
-      - type: bind
-        source: ${APP_DATA_DIR}:/config
-        target: /config
-      - type: bind
-        source: ${APP_DATA_DIR}:/data
-        target: /data
+      - ${APP_DATA_DIR}/config:/config
+      - ${APP_DATA_DIR}/data:/data
     user: "1000:1000"
     environment:
             - TZ=America/Toronto
