@@ -1,9 +1,11 @@
+version: "3.2"
+
 services:
 
   app_proxy:
     environment:
        APP_HOST: reus-komga_web_1
-       APP_PORT: 42069
+       APP_PORT: 25601
     container_name: nreus-komga_app_proxy_1
     
   web:
@@ -12,7 +14,7 @@ services:
       - ${APP_DATA_DIR}/config:/config
       - ${APP_DATA_DIR}/data:/data
     ports:
-      - "42069:25600"
+      - 25600:25600
     user: "1000:1000"
     environment:
       - TZ=America/Toronto
