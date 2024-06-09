@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
       
-  webserver:
+  komga:
     image: gotson/komga:latest
     ports:
       - "42069:25600"
@@ -11,5 +11,5 @@ services:
       - ${APP_DATA_DIR}/data:/data
     user: "1000:1000"
     environment:
-            - TZ=America/Toronto
+      - TZ=America/Toronto
     restart: unless-stopped
