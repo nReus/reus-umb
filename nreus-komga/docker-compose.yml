@@ -13,8 +13,6 @@ services:
     volumes:
       - ${APP_DATA_DIR}/config:/config
       - ${APP_DATA_DIR}/data:/data
-    ports:
-      - 25600:25600
     user: "1000:1000"
     environment:
       - TZ=America/Toronto
