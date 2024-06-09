@@ -3,7 +3,7 @@ version: "3.7"
 services:
       
   komga:
-    image: gotson/komga:latest
+    image: frooodle/s-pdf:latest
     ports:
       - "42069:25600"
     volumes:
