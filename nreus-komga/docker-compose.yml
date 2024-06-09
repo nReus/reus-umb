@@ -5,7 +5,7 @@ services:
   app_proxy:
     environment:
        APP_HOST: reus-komga_web_1
-       APP_PORT: 25601
+       APP_PORT: 25600
     container_name: nreus-komga_app_proxy_1
     
   web:
