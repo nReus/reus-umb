@@ -23,7 +23,7 @@ website: https://komga.org/
 dependencies: []
 repo: https://github.com/gotson/komga
 support: https://komga.org/docs/introduction
-port: 42069
+port: 25600
 gallery:
   - https://www.kavitareader.com/img/features/homepage.PNG
   - https://www.kavitareader.com/img/features/seriesdetail.PNG
